@@ -1,3 +1,15 @@
+header{
+    height:20em;
+    width: 100%;
+    background-color: #cfab99;
+    position: fixed;
+    top: 0;
+}
+
+main{
+    margin-top: 22em;
+}
+
 body {
                 background-color: #cfab99;
                 font-family: "Comic Sans MS", cursive, sans-serif;
@@ -117,7 +129,6 @@ footer      {
                 bottom: -12px;
                 left: 0;
                 right: 0;
-		
             }
             
 footer p    {
@@ -126,5 +137,4 @@ footer p    {
                 border-top: 2px solid #690000;
                 color: #690000;
                 padding: 5px;
-
             }
