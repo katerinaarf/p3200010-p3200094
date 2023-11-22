@@ -18,10 +18,17 @@ body {
 	    }
 
 table{
-	  	width: 100%;
+        margin-left:auto; 
+        margin-right:auto;
+	  	width: 50%;
+        border-collapse: collapse;    
   	  	border: 0px solid;
 		list-style-type: none;	   
 	    }
+
+td{
+    padding: 10px;
+}
 
 #navigation {
                 top: 240px;
