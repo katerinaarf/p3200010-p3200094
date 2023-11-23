@@ -288,11 +288,6 @@ footer p    {
     height: 60px;
 }
 
-.flexcontainer>div{
-    display: flex;
-    flex-wrap: wrap;
-    margin:100px;
-}
 
 section{
     position: relative;
