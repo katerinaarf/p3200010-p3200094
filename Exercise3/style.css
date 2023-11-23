@@ -169,3 +169,77 @@ footer p    {
 .color-changing-shadow:hover img {
     box-shadow: 5px 5px 20px rgba(255, 0, 0, 0.7);
 }
+
+.social-menu {
+    position: relative;
+    display: flex;
+}
+
+.social-icon{
+    position:relative;
+
+}
+
+.social-icon a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background:#fff;
+    border-radius: 40%;
+    text-align: center;
+    margin: 0 8px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .3);
+    transform: translateY(0) scale(1);
+    transition: .3s;
+}
+
+.social-icon:hover a{
+    transform: translateY(-6px) scale(1.2);
+    margin: 0 20px;
+}
+
+.social-icon:nth-child(1):hover a{
+    background:#f542c2 ;
+}
+
+.social-icon:nth-child(2):hover a{
+    background: #4842f5;
+}
+
+.social-icon:nth-child(3):hover a{
+    background: #42f56f;
+}
+
+.social-icon  img {
+    font-size:18px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+}
+
+
+.social-icon span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 16px;
+    z-index: -1;
+    transition: .3s;
+}
+
+.social-icon:hover span{
+    transform: translate(-50%, 90%) scale(1);
+}
+
+.social-icon:nth-child(1):hover span{
+    color:#f542c2 ;
+}
+
+.social-icon:nth-child(2):hover span{
+    color: #4842f5;
+}
+
+.social-icon:nth-child(3):hover span{
+    color: #42f56f;
+}
