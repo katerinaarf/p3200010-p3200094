@@ -152,15 +152,15 @@ footer p    {
 }
 
 .zoomable-image {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 350px;
     overflow: hidden;
     position: relative;
 }
 
 .zoomable-image img {
-    width:200px;
-    height:200px;
+    width:400px;
+    height:350px;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
