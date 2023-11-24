@@ -30,6 +30,7 @@ form {
 fieldset {
     margin-bottom: 20px;
     border-radius: 40px;
+    backdrop-filter: blur(55px);
 }
 
 legend {
@@ -37,12 +38,14 @@ legend {
     font-weight: bold;
     color: #333;
     border-radius: 40px;
+    backdrop-filter: blur(55px);
 }
 
 label {
     display: block;
     margin-bottom: 5px;
     border-radius: 40px;
+    backdrop-filter: blur(55px);
 }
 
 input,
@@ -52,6 +55,7 @@ textarea {
     margin-bottom: 10px;
     box-sizing: border-box;
     border-radius:40px ;
+    backdrop-filter: blur(55px);
 }
 
 input[type="submit"] {
