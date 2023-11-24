@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Φόρμα Εγγραφής Χρήστη</title>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Φόρμα Εγγραφής Χρήστη</h2>
+        <form id="registrationForm" action="#" method="post">
+            <fieldset>
+                <legend>Προσωπικά Στοιχεία</legend>
+                <label for="fullname">Ονοματεπώνυμο:</label>
+                <input type="text" id="fullname" name="fullname" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Διεύθυνση Κατοικίας:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="dob">Ημερομηνία Γέννησης:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="phone">Τηλέφωνο Επικοινωνίας:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Στοιχεία Ταυτοποίησης</legend>
+                <label for="username">Όνομα Χρήστη:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Κωδικός Πρόσβασης:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirmPassword">Επανάληψη Κωδικού Πρόσβασης:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Επιλογές Επικοινωνίας</legend>
+                <label>Επιλέξτε τρόπους επικοινωνίας:</label>
+                <input type="checkbox" id="sms" name="contactMethod" value="sms">
+                <label for="sms">SMS</label>
+
+                <input type="checkbox" id="emailContact" name="contactMethod" value="email">
+                <label for="emailContact">Email</label>
+
+                <input type="checkbox" id="viber" name="contactMethod" value="viber">
+                <label for="viber">Viber</label>
+
+                <input type="checkbox" id="whatsapp" name="contactMethod" value="whatsapp">
+                <label for="whatsapp">WhatsApp</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Ερωτηματολόγιο</legend>
+                <label for="interests">Είδος αγγελιών που σας ενδιαφέρει:</label>
+                <select id="interests" name="interests">
+                    <option value="1">Ακίνητα</option>
+                    <option value="2">Οχήματα</option>
+                    <option value="3">Οικιακές Συσκευές</option>
+                    <option value="4">Τεχνολογίας</option>
+                </select>
+            </fieldset>
+
+            <div id="realEstateOptions" class="hidden">
+                <fieldset>
+                    <legend>Αν ενδιαφέρεστε για Ακίνητα:</legend>
+                    <label>Με ενδιαφέρουν αγγελίες για:</label>
+                    <input type="checkbox" id="residential" name="realEstateInterest" value="residential">
+                    <label for="residential">Αγορά/Ενοικίαση Κατοικιών</label>
+
+                    <input type="checkbox" id="commercial" name="realEstateInterest" value="commercial">
+                    <label for="commercial">Αγορά/Ενοικίαση Επαγγελματικών Χώρων</label>
+
+                    <input type="checkbox" id="notInterestedRealEstate" name="realEstateInterest" value="notInterested">
+                    <label for="notInterestedRealEstate">Δεν με ενδιαφέρουν αγγελίες ακινήτων</label>
+                </fieldset>
+
+                <div id="locationOptions" class="hidden">
+                    <fieldset>
+                        <legend>Εάν ενδιαφέρεστε για περιοχές εντός Αττικής:</legend>
+                        <input type="checkbox" id="centralAthens" name="locationInterest" value="centralAthens">
+                        <label for="centralAthens">Ψάχνω για περιοχές εντός του κέντρου</label>
+
+                        <input type="checkbox" id="outsideCentralAthens" name="locationInterest" value="outsideCentralAthens">
+                        <label for="outsideCentralAthens">Ψάχνω για περιοχές εκτός του κέντρου</label>
+
+                        <input type="checkbox" id="notInterestedLocation" name="locationInterest" value="notInterested">
+                        <label for="notInterestedLocation">Δεν με ενδιαφέρουν περιοχές εντός Αττικής</label>
+                    </fieldset>
+                </div>
+<div id="vehicleOptions" class="hidden">
+    <fieldset>
+        <legend>Εάν ενδιαφέρεστε για Οχήματα:</legend>
+        <input type="checkbox" id="cars" name="vehicleInterest" value="cars">
+        <label for="cars">Με ενδιαφέρουν αγγελίες για αγορά/ενοικίαση αυτοκινήτων</label>
+
+        <input type="checkbox" id="motorcycles" name="vehicleInterest" value="motorcycles">
+        <label for="motorcycles">Με ενδιαφέρουν αγγελίες για αγορά/ενοικίαση μοτοσυκλετών</label>
+
+        <input type="checkbox" id="notInterestedVehicles" name="vehicleInterest" value="notInterested">
+        <label for="notInterestedVehicles">Δεν με ενδιαφέρουν αγγελίες οχημάτων</label>
+    </fieldset>
+</div>
+
+<div id="appliancesOptions" class="hidden">
+    <fieldset>
+        <legend>Εάν ενδιαφέρεστε για Οικιακές Συσκευές:</legend>
+        <input type="checkbox" id="washingMachines" name="appliancesInterest" value="washingMachines">
+        <label for="washingMachines">Με ενδιαφέρουν αγγελίες για αγορά πλυντηρίων</label>
+
+        <input type="checkbox" id="electricKitchens" name="appliancesInterest" value="electricKitchens">
+        <label for="electricKitchens">Με ενδιαφέρουν αγγελίες για αγορά ηλεκτρικών κουζινών</label>
+
+        <input type="checkbox" id="refrigerators" name="appliancesInterest" value="refrigerators">
+        <label for="refrigerators">Με ενδιαφέρουν αγγελίες για αγορά ψυγείων</label>
+
+        <input type="checkbox" id="otherAppliances" name="appliancesInterest" value="otherAppliances">
+        <label for="otherAppliances">Με ενδιαφέρουν αγγελίες για αγορά άλλων μικροσυσκευών</label>
+
+        <input type="checkbox" id="notInterestedAppliances" name="appliancesInterest" value="notInterested">
+        <label for="notInterestedAppliances">Δεν με ενδιαφέρουν αγγελίες οικιακών συσκευών</label>
+    </fieldset>
+</div>
+
+<div id="technologyOptions" class="hidden">
+    <fieldset>
+        <legend>Εάν ενδιαφέρεστε για Τεχνολογία:</legend>
+        <input type="checkbox" id="mobilePhones" name="technologyInterest" value="mobilePhones">
+        <label for="mobilePhones">Με ενδιαφέρουν αγγελίες για αγορά κινητών τηλεφώνων</label>
+
+        <input type="checkbox" id="photoAndVideo" name="technologyInterest" value="photoAndVideo">
+        <label for="photoAndVideo">Με ενδιαφέρουν αγγελίες για αγορά βάσει της Φωτογραφίας & του Video</label>
+
+        <input type="checkbox" id="audioSystems" name="technologyInterest" value="audioSystems">
+        <label for="audioSystems">Με ενδιαφέρουν αγγελίες για αγορά ηχοσυστημάτων</label>
+
+        <input type="checkbox" id="laptops" name="technologyInterest" value="laptops">
+        <label for="laptops">Με ενδιαφέρουν αγγελίες για αγορά laptop</label>
+
+        <input type="checkbox" id="computerPeripherals" name="technologyInterest" value="computerPeripherals">
+        <label for="computerPeripherals">Με ενδιαφέρουν αγγελίες για αγορά Περιφερειακών Ηλ. Υπολογιστών</label>
+
+        <input type="checkbox" id="notInterestedTechnology" name="technologyInterest" value="notInterested">
+        <label for="notInterestedTechnology">Δεν με ενδιαφέρουν αγγελίες τεχνολογίας</label>
+    </fieldset>
+</div>
+
+            </div>
+
+            <input type="submit" value="Υποβολή">
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
