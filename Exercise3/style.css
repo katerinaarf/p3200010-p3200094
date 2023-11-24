@@ -1,5 +1,5 @@
 /*header{
-    height:20em;
+    height:18em;
     width: 100%;
     background-color: #cfab99;
     position: fixed;
@@ -153,10 +153,10 @@ footer p    {
 
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(10, 0.5fr);
-    grid-auto-rows: 100px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 0fr);
     column-gap: 5px;
-    row-gap: 5px;
+    row-gap: 1rem;
 }
   
 .box1 {
@@ -174,30 +174,35 @@ footer p    {
     grid-row: 1/ 10;
 }
 
+.wrapper2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    column-gap: 5px;
+    row-gap: 1rem;
+}
+
 .box4 {
     grid-column:1;
-    grid-row: 6/ 10;
+    grid-row: 5/ 10;
 }
   
 .box5 {
-    grid-column:2/10;
-    grid-row: 6/ 10;
+    grid-column:2;
+    grid-row: 5/ 10;
 }
 
 .box6 {
-    grid-column:3/10;
-    grid-row: 6/ 10;
+    grid-column:3;
+    grid-row: 5/10;
 }
 
 .box7 {
-    grid-column:8;
-    grid-row: 6/ 10;
+    grid-column:4;
+    grid-row: 5/ 10;
 }
 
-.box8 {
-    grid-column:10;
-    grid-row: 6/ 10;
-}
+
 
 .zoomable-image {
     width: 400px;
