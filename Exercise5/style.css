@@ -165,6 +165,12 @@ h6{
 	font-weight: normal;
 }
 
+h8{
+	font-size: 100%;
+	text-align: right;
+	font-weight: normal;
+}
+
 p {
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 14px;
@@ -499,4 +505,90 @@ button{
 
 button:hover{
     background-color: rgba(7, 191, 212, 0.679)
+}
+
+@media screen and (max-width: 600px){
+   p {
+       font-size: 14px;
+    }
+
+    .centered-image {
+  	max-width: 70%;
+  	max-height: 70%;
+    }    
+
+    h1{
+        font-size:100%;
+    }
+    
+    .flexcontainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .flexcontainer > a > img{
+        max-width: 70px;
+        margin-bottom:10px;
+    }
+
+    h4{
+	font-size: 80%;
+    }
+
+    footer pre{
+       font: 12px courier;
+    }
+
+    footer p{
+        font: 10px courier;
+    }
+
+    .zoomable-image {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .zoomable-image img {
+       width:220px;
+       height:220px;
+       margin-bottom:10px;
+    }
+    
+    td{
+       padding: 0px;
+    }
+
+    .social-icon a{
+        width: 20px;
+        height: 20px;
+    }
+
+    .social-icon  img {
+        width: 20px;
+        height: 20px;
+    }
+
+    b{
+        font-size: 14px;
+    }
+
+    h7{
+        font-size: 12px;
+    }
+
+    h3{
+	font-size: 100%;
+    }
+
+    section{
+        left: 0%;
+    }
+
+    h8{
+        font-size: 80%;
+    }
+
+
 }
