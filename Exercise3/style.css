@@ -6,69 +6,6 @@ header{
     top: 0;
 }
 
-.container {
-    width: 90%;
-    max-width: 600px;
-    margin: 50px auto;
-}
-
-form {
-    background-color: transparent;
-    padding: 20px;
-    border-radius: 40px;
-}
-
-fieldset {
-    margin-bottom: 20px;
-    border-radius: 40px;
-    backdrop-filter: blur(55px);
-}
-
-legend {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #333;
-    border-radius: 40px;
-    backdrop-filter: blur(55px);
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    border-radius: 40px;
-    backdrop-filter: blur(55px);
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    border-radius:40px ;
-    backdrop-filter: blur(55px);
-}
-
-input[type="submit"] {
-    width: 100%;
-    height:40px;
-    border-radius: 40px;
-    background-color: rgb(255, 255, 255);
-    border: none;
-    outline: none;
-    cursor:pointer;
-    font-size:1rem;
-    font-weight:600;
-    transition: all 0.4s ease;
-}
-
-input[type="submit"]:hover {
-    background-color: rgb(255, 255, 255, 0.5);
-}
-
-
-
-
 body {
     background-color: #fff;                 /*background color gia to body leuko*/
     font-family: "fontName";                  /* xrisi tis grammatoseiras pou thtoume parakato*/
@@ -94,7 +31,6 @@ body {
   	max-height: 100%;
   	margin-bottom: 10px;
 }
-
 
 
 
@@ -488,7 +424,7 @@ button{
     width: 100%;
     height:40px;
     border-radius: 40px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(1, 63, 144);
     border: none;
     outline: none;
     cursor:pointer;
@@ -498,5 +434,5 @@ button{
 }
 
 button:hover{
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgba(7, 191, 212, 0.679)
 }

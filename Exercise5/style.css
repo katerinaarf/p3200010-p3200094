@@ -488,7 +488,7 @@ button{
     width: 100%;
     height:40px;
     border-radius: 40px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(1, 63, 144);
     border: none;
     outline: none;
     cursor:pointer;
@@ -498,5 +498,5 @@ button{
 }
 
 button:hover{
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgba(7, 191, 212, 0.679)
 }
