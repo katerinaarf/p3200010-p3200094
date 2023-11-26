@@ -1,17 +1,11 @@
-
-body {
-    font-family: "fontName";
-    margin: 0;
-    padding: 0;
-    background-image: url(images/head.jpg);
+header{
+    height:18em;
+    width: 100%;
+    background-image: url(images/head.jpg);      /*allagi background header oste na diaforopoieitai apo to ipoloipo*/
+    position: relative;                          /*o header paramenei statheros kai den kineitai mazi me tin kinisi tis selidas*/
+    top: 0;
 }
 
-@font-face {
-    font-family: fontName;
-    src:url(images/manrope-regular.ttf) format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
 
 .container {
     width: 90%;
@@ -73,3 +67,436 @@ input[type="submit"]:hover {
     background-color: rgb(255, 255, 255, 0.5);
 }
 
+
+
+
+body {
+    background-color: #fff;                 /*background color gia to body leuko*/
+    font-family: "fontName";                  /* xrisi tis grammatoseiras pou thtoume parakato*/
+    font-size: 14px;
+    padding-bottom: 100px;
+}
+
+@font-face {
+    font-family: fontName;
+    src:url(images/manrope-regular.ttf) format("truetype");              /* thetoume tin grammatoseira mas*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+.image-container {
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+}
+
+.centered-image {
+  	max-width: 100%;
+  	max-height: 100%;
+  	margin-bottom: 10px;
+}
+
+
+
+ /*orizoume tis epiloges gia to table*/
+table{                          
+    margin-left:auto; 
+    margin-right:auto;
+  	width: 50%;
+    border-collapse: collapse;    
+  	border: 0px solid;
+	list-style-type: none;	   
+}
+
+td{
+    padding: 10px;
+}
+
+#navigation {
+    top: 240px;
+    left: 0px;
+    word-wrap: normal;
+    width: 200px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+#navigation ul {
+  	margin: 0;
+    margin: 5px 5px 10px 5px;
+    padding: 5px;
+    list-style: none;
+}
+
+
+#navigation ul a:hover {
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    border-left: 3px solid #6E6F65;
+    border-bottom: 1px solid #BABABA;
+    padding: 0 0 1px;
+    margin: 0 1px 2px 1px;
+}
+
+h1{	
+    text-align: center;
+}
+
+h3{
+	font-size: 120%;
+	text-align: center;
+}
+
+h4{
+	font-size: 100%;
+	text-align: center;
+	font-weight: normal;
+}
+
+h5{		
+	font-size: 120%;
+	font-weight: normal;
+}
+
+h6{
+	font-size: 80%;
+	font-weight: normal;
+}
+
+p {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 14px;
+}
+            
+p.welcome   {
+    font-size: 16px;
+    text-align: center;
+    text-decoration: underline black solid;
+}
+
+li a {
+    text-decoration: solid;
+    color: #000000;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+            
+li a:hover  {
+    background: #C8CAB8;
+}
+
+#toyota-table{  		
+	margin: 0 auto;
+	border: 2px solid black;
+	padding: 8px;
+
+}
+          
+
+
+
+
+
+ /*epiloges gia footer*/
+footer      {                
+    clear: both;
+    padding: 0;
+    bottom: -12px;
+    left: 0;
+    right: 0;
+}
+            
+footer p    {
+    font: 12px courier;
+    text-align: center;
+    border-top: 2px solid #000469;
+    color: rgb(3, 5, 112) 0, 105;
+    padding: 5px;
+}
+
+
+
+
+/*xrisi kanonon gia layout*/
+.wrapper {                  
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 0fr);
+    column-gap: 5px;
+    row-gap: 1rem;
+}
+  
+.box1 {
+    grid-column:1;
+    grid-row: 1 / 10;
+}
+  
+.box2 {
+    grid-column:2;
+    grid-row: 1/ 10;
+}
+
+.box3 {
+    grid-column:3;
+    grid-row: 1/ 10;
+}
+
+
+
+
+
+/* diaforopoihsi epilogon layout gia omoiomorfo apotelesma*/
+.wrapper2 {         
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    column-gap: 5px;
+    row-gap: 1rem;
+}
+
+.box4 {
+    grid-column:1;
+    grid-row: 5/ 10;
+}
+  
+.box5 {
+    grid-column:2;
+    grid-row: 5/ 10;
+}
+
+.box6 {
+    grid-column:3;
+    grid-row: 5/10;
+}
+
+.box7 {
+    grid-column:4;
+    grid-row: 5/ 10;
+}
+
+
+
+
+/*gia efe "animated" eikonas zoom in otan erxetai se epafi me ton cursor*/
+.zoomable-image {         
+    width: 400px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+
+.zoomable-image img {
+    width:400px;
+    height:350px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.zoomable-image:hover img {
+    transform: scale(1.2); 
+}
+
+
+
+
+/*allagi sto xroma tis skiasis otan akoumpame ton cursor*/
+.color-changing-shadow {         
+    position: relative;
+    display: inline-block;
+}
+
+.color-changing-shadow img {
+    transition: box-shadow 0.3s ease;
+    font-size:18px;
+    line-height: 50px;
+    border-radius: 10%;
+}
+
+.color-changing-shadow:hover img {
+    box-shadow: 5px 5px 20px rgba(4, 83, 220, 0.77);
+}
+
+
+
+
+
+/*"Gia tin selida AboutUs" efe "animated" oste otan akoumpame ton cursor sta eikonidia ton social media
+ na iparxei mia kinisi,allagi xromatos, kai emfanisi onomatos social*/
+.social-menu {        
+    position: relative;
+    display: flex;
+}
+
+.social-icon{
+    position:relative;
+
+}
+
+.social-icon a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background:#fff;
+    border-radius: 40%;
+    text-align: center;
+    margin: 0 8px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .3);
+    transform: translateY(0) scale(1);
+    transition: .3s;
+}
+
+.social-icon:hover a{
+    transform: translateY(-6px) scale(1.2);
+    margin: 0 20px;
+}
+
+.social-icon:nth-child(1):hover a{
+    background:#f542c2 ;
+}
+
+.social-icon:nth-child(2):hover a{
+    background: #4842f5;
+}
+
+.social-icon:nth-child(3):hover a{
+    background: #42f56f;
+}
+
+.social-icon  img {
+    font-size:18px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+}
+
+
+.social-icon span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 16px;
+    z-index: -1;
+    transition: .3s;
+}
+
+.social-icon:hover span{
+    transform: translate(-50%, 90%) scale(1);
+}
+
+.social-icon:nth-child(1):hover span{
+    color:#f542c2 ;
+}
+
+.social-icon:nth-child(2):hover span{
+    color: #4842f5;
+}
+
+.social-icon:nth-child(3):hover span{
+    color: #42f56f;
+}
+
+
+
+
+
+/*epiloges gia megethos eikonidion stin selida index kai Advertisements*/
+.flexcontainer{
+    display: flex;
+    justify-content:center;
+}
+
+.flexcontainer > a{
+    width: 50px;
+    margin: 100px;
+    line-height: 75px;
+    font-size:30px;
+}
+.flexcontainer > a > img{
+    width: 80px;
+    height: 80px;
+}
+
+.flexcontainer > details{
+    width: 80px;
+    margin: 80px;
+    line-height: 15px;
+    text-align: left;
+    font-size:15px;
+}
+
+.flexcontainer > details > summary > img{
+    width: 60px;
+    height: 60px;
+}
+
+
+
+
+/*diamorfosi tou form stin selida contact us etsi oste na einai omoiomorfo , me kinisi sta inputbox*/
+section{
+    position: relative;
+    left: 35%;
+    max-width: 400px;
+    background-color: transparent;
+    border: 2px solid rgba(9, 9, 9, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(55px);
+    display: flex;
+    justify-content: center;
+    padding: 2rem 3rem;
+}
+
+.inputbox{
+    position:relative;
+    margin: 30px 0;
+    max-width: 400px;
+    border-bottom: 2px solid #000;
+}
+
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left:5%;
+    transform: translateY(-50%);
+    color:#000;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+
+input:focus~label,
+input:valid~label{
+    top: -10px;
+}
+
+.inputbox input{
+    width: 100%;
+    height:60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 35px 0 5px;
+    color: #000;
+}
+
+button{
+    width: 100%;
+    height:40px;
+    border-radius: 40px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    cursor:pointer;
+    font-size:1rem;
+    font-weight:600;
+    transition: all 0.4s ease;
+}
+
+button:hover{
+    background-color: rgb(255, 255, 255, 0.5);
+}
