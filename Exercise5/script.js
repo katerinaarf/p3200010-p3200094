@@ -1,16 +1,23 @@
-// script.js
 
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("registrationForm");
+    const form = document.querySelector("#registrationForm");
     const realEstateOptions = document.getElementById("realEstateOptions");
     const locationOptions = document.getElementById("locationOptions");
 
-    
     form.addEventListener("submit", function (event) {
-        if (!validatePasswords()) {
-            event.preventDefault(); 
+        event.preventDefault();
+        if (validateForm()) {     //elegxos egkirotitas
+            saveUserData();         // an einai ok epitixis eggrafi
+            showSuccessPage();
+            return true;
         }
     });
+
+    function validateForm() {
+        return validatePasswords(); 
+    }
+
+    
 
     function validatePasswords() {
         const password = form.querySelector("#password").value;
@@ -44,38 +51,39 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-const vehicleOptions = document.getElementById("vehicleOptions");
-form.addEventListener("change", function () {
-    const vehicleInterest = form.querySelector('input[name="vehicleInterest"]:checked');
+    const vehicleOptions = document.getElementById("vehicleOptions");
+    form.addEventListener("change", function () {
+        const vehicleInterest = form.querySelector('input[name="vehicleInterest"]:checked');
 
-    if (vehicleInterest) {
-        vehicleOptions.classList.remove("hidden");
-    } else {
-        vehicleOptions.classList.add("hidden");
-    }
-});
+        if (vehicleInterest) {
+            vehicleOptions.classList.remove("hidden");
+        } else {
+            vehicleOptions.classList.add("hidden");
+        }
+    });
 
-const appliancesOptions = document.getElementById("appliancesOptions");
-form.addEventListener("change", function () {
-    const appliancesInterest = form.querySelector('input[name="appliancesInterest"]:checked');
+    const appliancesOptions = document.getElementById("appliancesOptions");
+    form.addEventListener("change", function () {
+        const appliancesInterest = form.querySelector('input[name="appliancesInterest"]:checked');
 
-    if (appliancesInterest) {
-        appliancesOptions.classList.remove("hidden");
-    } else {
-        appliancesOptions.classList.add("hidden");
-    }
-});
+        if (appliancesInterest) {
+            appliancesOptions.classList.remove("hidden");
+        } else {
+            appliancesOptions.classList.add("hidden");
+        }
+    });
 
 
-const technologyOptions = document.getElementById("technologyOptions");
-form.addEventListener("change", function () {
-    const technologyInterest = form.querySelector('input[name="technologyInterest"]:checked');
+    const technologyOptions = document.getElementById("technologyOptions");
+    form.addEventListener("change", function () {
+        const technologyInterest = form.querySelector('input[name="technologyInterest"]:checked');
 
-    if (technologyInterest) {
-        technologyOptions.classList.remove("hidden");
-    } else {
-        technologyOptions.classList.add("hidden");
-    }
-});
+        if (technologyInterest) {
+            technologyOptions.classList.remove("hidden");
+        } else {
+            technologyOptions.classList.add("hidden");
+        }
+    });
+
 });
 

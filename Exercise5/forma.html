@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <title >Φόρμα Εγγραφής Χρήστη</title>
 </head>
 <body>
@@ -23,16 +23,31 @@
                 <input type="text" id="address" name="address" required>
 
                 <label for="dob">Ημερομηνία Γέννησης:</label>
-                <input type="date" id="dob" name="dob" required>
+                <input type="date" id="dob" name="dob" max="2010-12-31" min="1900-01-01" required>
 
                 <label for="phone">Τηλέφωνο Επικοινωνίας:</label>
                 <input type="tel" id="phone" name="phone" required>
+
+                <label for="gender"><span class="gender">
+                    Φύλο
+                </span></label>
+                <input type="text" id="gender" name="gender" placeholder="Female, Male, κτλ"
+                    list="listOfgenders">
+            </fieldset>
+
+            <datalist id="listOfgenders">
+                <option value="Female"></option>
+                <option value="Male"></option>
+                <option value="Agender"></option>
+                <option value="Bigender"></option>
+                <option value="Something else"></option>
+            </datalist>
             </fieldset>
 
             <fieldset>
                 <legend>Στοιχεία Ταυτοποίησης</legend>
-                <label for="username">Όνομα Χρήστη:</label>
-                <input type="text" id="username" name="username" required>
+                <label for="user">Όνομα Χρήστη:</label>
+                <input type="text" id="user" name="user" required>
 
                 <label for="password">Κωδικός Πρόσβασης:</label>
                 <input type="password" id="password" name="password" required>
@@ -58,101 +73,125 @@
             </fieldset>
 
             <fieldset>
-                <legend>Ερωτηματολόγιο</legend>
-                <label for="interests">Είδος αγγελιών που σας ενδιαφέρει:</label>
-                <select id="interests" name="interests">
-                    <option value="1">Ακίνητα</option>
-                    <option value="2">Οχήματα</option>
-                    <option value="3">Οικιακές Συσκευές</option>
-                    <option value="4">Τεχνολογίας</option>
-                </select>
+                <label for="interests"><span class="question">
+                    Τι είδους αγγελίες προτιμάτε
+                </span></label><br>
+                <input type="text" id="interests" name="interests" placeholder="Ακίνητα, Οχήματα, κτλ"
+                    list="listOfChoices">
             </fieldset>
 
+            <datalist id="listOfChoices">
+                <option value="Ακίνητα"></option>
+                <option value="Οχήματα"></option>
+                <option value="Οικιακές Συσκευές"></option>
+                <option value="Τεχνολογία"></option>
+            </datalist>
+
+            <div class="check">
             <div id="realEstateOptions" class="hidden">
                 <fieldset>
                     <legend>Αν ενδιαφέρεστε για Ακίνητα:</legend>
-                    <label>Με ενδιαφέρουν αγγελίες για:</label>
+                    <label>Με ενδιαφέρουν αγγελίες για:</label><br>
                     <input type="checkbox" id="residential" name="realEstateInterest" value="residential">
-                    <label for="residential">Αγορά/Ενοικίαση Κατοικιών</label>
+                    <label for="residential">
+                        Αγορά/Ενοικίαση 
+                        Κατοικιών</label>
 
                     <input type="checkbox" id="commercial" name="realEstateInterest" value="commercial">
-                    <label for="commercial">Αγορά/Ενοικίαση Επαγγελματικών Χώρων</label>
+                    <label for="commercial">Αγορά/Ενοικίαση 
+                        Επαγγελματικών Χώρων</label>
 
                     <input type="checkbox" id="notInterestedRealEstate" name="realEstateInterest" value="notInterested">
-                    <label for="notInterestedRealEstate">Δεν με ενδιαφέρουν αγγελίες ακινήτων</label>
+                    <label for="notInterestedRealEstate">Δεν με ενδιαφέρουν
+                         αγγελίες ακινήτων</label>
                 </fieldset>
 
                 <div id="locationOptions" class="hidden">
                     <fieldset>
-                        <legend>Εάν ενδιαφέρεστε για περιοχές εντός Αττικής:</legend>
+                        <legend>Εάν ενδιαφέρεστε για περιοχές εντός Αττικής:</legend><br>
                         <input type="checkbox" id="centralAthens" name="locationInterest" value="centralAthens">
-                        <label for="centralAthens">Ψάχνω για περιοχές εντός του κέντρου</label>
+                        <label for="centralAthens">Ψάχνω για περιοχές 
+                            εντός του κέντρου</label>
 
                         <input type="checkbox" id="outsideCentralAthens" name="locationInterest" value="outsideCentralAthens">
-                        <label for="outsideCentralAthens">Ψάχνω για περιοχές εκτός του κέντρου</label>
+                        <label for="outsideCentralAthens">Ψάχνω για περιοχές 
+                            εκτός του κέντρου</label>
 
                         <input type="checkbox" id="notInterestedLocation" name="locationInterest" value="notInterested">
-                        <label for="notInterestedLocation">Δεν με ενδιαφέρουν περιοχές εντός Αττικής</label>
+                        <label for="notInterestedLocation">Δεν με ενδιαφέρουν
+                             περιοχές εντός Αττικής</label>
                     </fieldset>
                 </div>
-<div id="vehicleOptions" class="hidden">
-    <fieldset>
-        <legend>Εάν ενδιαφέρεστε για Οχήματα:</legend>
-        <input type="checkbox" id="cars" name="vehicleInterest" value="cars">
-        <label for="cars">Με ενδιαφέρουν αγγελίες για αγορά/ενοικίαση αυτοκινήτων</label>
+                <div id="vehicleOptions" class="hidden">
+                    <fieldset>
+                        <legend>Εάν ενδιαφέρεστε για Οχήματα:</legend><br>
+                        <input type="checkbox" id="cars" name="vehicleInterest" value="cars">
+                        <label for="cars">Με ενδιαφέρουν αγγελίες 
+                            για αγορά/ενοικίαση αυτοκινήτων</label>
 
-        <input type="checkbox" id="motorcycles" name="vehicleInterest" value="motorcycles">
-        <label for="motorcycles">Με ενδιαφέρουν αγγελίες για αγορά/ενοικίαση μοτοσυκλετών</label>
+                        <input type="checkbox" id="motorcycles" name="vehicleInterest" value="motorcycles">
+                        <label for="motorcycles">Με ενδιαφέρουν αγγελίες 
+                            για αγορά/ενοικίαση μοτοσυκλετών</label>
 
-        <input type="checkbox" id="notInterestedVehicles" name="vehicleInterest" value="notInterested">
-        <label for="notInterestedVehicles">Δεν με ενδιαφέρουν αγγελίες οχημάτων</label>
-    </fieldset>
-</div>
+                        <input type="checkbox" id="notInterestedVehicles" name="vehicleInterest" value="notInterested">
+                        <label for="notInterestedVehicles">Δεν με ενδιαφέρουν αγγελίες οχημάτων</label>
+                    </fieldset>
+                </div>
 
-<div id="appliancesOptions" class="hidden">
-    <fieldset>
-        <legend>Εάν ενδιαφέρεστε για Οικιακές Συσκευές:</legend>
-        <input type="checkbox" id="washingMachines" name="appliancesInterest" value="washingMachines">
-        <label for="washingMachines">Με ενδιαφέρουν αγγελίες για αγορά πλυντηρίων</label>
+            <div id="appliancesOptions" class="hidden">
+                <fieldset>
+                    <legend>Εάν ενδιαφέρεστε για Οικιακές Συσκευές:</legend><br>
+                    <input type="checkbox" id="washingMachines" name="appliancesInterest" value="washingMachines">
+                    <label for="washingMachines">Με ενδιαφέρουν αγγελίες 
+                        για αγορά πλυντηρίων</label>
 
-        <input type="checkbox" id="electricKitchens" name="appliancesInterest" value="electricKitchens">
-        <label for="electricKitchens">Με ενδιαφέρουν αγγελίες για αγορά ηλεκτρικών κουζινών</label>
+                    <input type="checkbox" id="electricKitchens" name="appliancesInterest" value="electricKitchens">
+                    <label for="electricKitchens">Με ενδιαφέρουν αγγελίες
+                         για αγορά ηλεκτρικών κουζινών</label>
 
-        <input type="checkbox" id="refrigerators" name="appliancesInterest" value="refrigerators">
-        <label for="refrigerators">Με ενδιαφέρουν αγγελίες για αγορά ψυγείων</label>
+                    <input type="checkbox" id="refrigerators" name="appliancesInterest" value="refrigerators">
+                    <label for="refrigerators">Με ενδιαφέρουν αγγελίες 
+                        για αγορά ψυγείων</label>
 
-        <input type="checkbox" id="otherAppliances" name="appliancesInterest" value="otherAppliances">
-        <label for="otherAppliances">Με ενδιαφέρουν αγγελίες για αγορά άλλων μικροσυσκευών</label>
+                    <input type="checkbox" id="otherAppliances" name="appliancesInterest" value="otherAppliances">
+                    <label for="otherAppliances">Με ενδιαφέρουν αγγελίες
+                         για αγορά άλλων μικροσυσκευών</label>
 
-        <input type="checkbox" id="notInterestedAppliances" name="appliancesInterest" value="notInterested">
-        <label for="notInterestedAppliances">Δεν με ενδιαφέρουν αγγελίες οικιακών συσκευών</label>
-    </fieldset>
-</div>
-
-<div id="technologyOptions" class="hidden">
-    <fieldset>
-        <legend>Εάν ενδιαφέρεστε για Τεχνολογία:</legend>
-        <input type="checkbox" id="mobilePhones" name="technologyInterest" value="mobilePhones">
-        <label for="mobilePhones">Με ενδιαφέρουν αγγελίες για αγορά κινητών τηλεφώνων</label>
-
-        <input type="checkbox" id="photoAndVideo" name="technologyInterest" value="photoAndVideo">
-        <label for="photoAndVideo">Με ενδιαφέρουν αγγελίες για αγορά βάσει της Φωτογραφίας & του Video</label>
-
-        <input type="checkbox" id="audioSystems" name="technologyInterest" value="audioSystems">
-        <label for="audioSystems">Με ενδιαφέρουν αγγελίες για αγορά ηχοσυστημάτων</label>
-
-        <input type="checkbox" id="laptops" name="technologyInterest" value="laptops">
-        <label for="laptops">Με ενδιαφέρουν αγγελίες για αγορά laptop</label>
-
-        <input type="checkbox" id="computerPeripherals" name="technologyInterest" value="computerPeripherals">
-        <label for="computerPeripherals">Με ενδιαφέρουν αγγελίες για αγορά Περιφερειακών Ηλ. Υπολογιστών</label>
-
-        <input type="checkbox" id="notInterestedTechnology" name="technologyInterest" value="notInterested">
-        <label for="notInterestedTechnology">Δεν με ενδιαφέρουν αγγελίες τεχνολογίας</label>
-    </fieldset>
-</div>
-
+                    <input type="checkbox" id="notInterestedAppliances" name="appliancesInterest" value="notInterested">
+                    <label for="notInterestedAppliances">Δεν με ενδιαφέρουν 
+                        αγγελίες οικιακών συσκευών</label>
+                </fieldset>
             </div>
+
+        <div id="technologyOptions" class="hidden">
+            <fieldset>
+                <legend>Εάν ενδιαφέρεστε για Τεχνολογία:</legend><br>
+                <input type="checkbox" id="mobilePhones" name="technologyInterest" value="mobilePhones">
+                <label for="mobilePhones">Με ενδιαφέρουν αγγελίες 
+                    για αγορά κινητών τηλεφώνων</label>
+
+                <input type="checkbox" id="photoAndVideo" name="technologyInterest" value="photoAndVideo">
+                <label for="photoAndVideo">Με ενδιαφέρουν αγγελίες 
+                    για αγορά βάσει της Φωτογραφίας & του Video</label>
+
+                <input type="checkbox" id="audioSystems" name="technologyInterest" value="audioSystems">
+                <label for="audioSystems">Με ενδιαφέρουν αγγελίες 
+                    για αγορά ηχοσυστημάτων</label>
+
+                <input type="checkbox" id="laptops" name="technologyInterest" value="laptops">
+                <label for="laptops">Με ενδιαφέρουν αγγελίες 
+                    για αγορά laptop</label>
+
+                <input type="checkbox" id="computerPeripherals" name="technologyInterest" value="computerPeripherals">
+                <label for="computerPeripherals">Με ενδιαφέρουν αγγελίες 
+                    για αγορά Περιφερειακών Ηλ. Υπολογιστών</label>
+
+                <input type="checkbox" id="notInterestedTechnology" name="technologyInterest" value="notInterested">
+                <label for="notInterestedTechnology">Δεν με ενδιαφέρουν αγγελίες τεχνολογίας</label>
+            </fieldset>
+        </div>
+    </div>
+</div>
 
             <input type="submit" value="Υποβολή">
         </form>
