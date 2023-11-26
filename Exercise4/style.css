@@ -1,26 +1,23 @@
 header{
     height:18em;
-    max-width: 100%;
-    background-image: url(images/head.jpg);
-    position: relative;
+    width: 100%;
+    background-image: url(images/head.jpg);      /*allagi background header oste na diaforopoieitai apo to ipoloipo*/
+    position: relative;                          /*o header paramenei statheros kai den kineitai mazi me tin kinisi tis selidas*/
     top: 0;
 }
 
 
 
 body {
-    background-color: #fff;
-    font-family: "fontName";
+    background-color: #fff;                 /*background color gia to body leuko*/
+    font-family: "fontName";                  /* xrisi tis grammatoseiras pou thtoume parakato*/
     font-size: 14px;
     padding-bottom: 100px;
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
 }
 
 @font-face {
     font-family: fontName;
-    src:url(images/manrope-regular.ttf) format("truetype");
+    src:url(images/manrope-regular.ttf) format("truetype");              /* thetoume tin grammatoseira mas*/
     font-weight: normal;
     font-style: normal;
 }
@@ -37,13 +34,16 @@ body {
   	margin-bottom: 10px;
 }
 
-table{
+
+
+ /*orizoume tis epiloges gia to table*/
+table{                          
     margin-left:auto; 
     margin-right:auto;
-    width: 50%;
+  	width: 50%;
     border-collapse: collapse;    
-    border: 0px solid;
-    list-style-type: none;	   
+  	border: 0px solid;
+	list-style-type: none;	   
 }
 
 td{
@@ -79,8 +79,7 @@ td{
 }
 
 h1{	
-   font-size: 200%;    
-   text-align: center;
+    text-align: center;
 }
 
 h3{
@@ -104,20 +103,17 @@ h6{
 	font-weight: normal;
 }
 
-h7{
-        font-size: 14px;
+h8{
+	font-size: 100%;
+	text-align: right;
+	font-weight: normal;
 }
-
 
 p {
     font-family: "Comic Sans MS", cursive, sans-serif;
-    font-size: 18px;
+    font-size: 14px;
 }
-
-b{
-    font-size: 16px;
-}
-         
+            
 p.welcome   {
     font-size: 16px;
     text-align: center;
@@ -142,28 +138,33 @@ li a:hover  {
 	padding: 8px;
 
 }
-            
-footer      {
+          
+
+
+
+
+
+ /*epiloges gia footer*/
+footer      {                
     clear: both;
     padding: 0;
     bottom: -12px;
     left: 0;
     right: 0;
 }
-
-footer pre{
-    font: 14px courier;
-}
             
 footer p    {
     font: 12px courier;
     text-align: center;
     border-top: 2px solid #000469;
-    color: rgb(3, 5, 112) 0, 105;
     padding: 5px;
 }
 
-.wrapper {
+
+
+
+/*xrisi kanonon gia layout*/
+.wrapper {                  
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 0fr);
@@ -186,8 +187,13 @@ footer p    {
     grid-row: 1/ 10;
 }
 
-.wrapper2 {
-    display: grid;
+
+
+
+
+/* diaforopoihsi epilogon layout gia omoiomorfo apotelesma*/
+.wrapper2 {         
+    display: grid; 
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(10, 1fr);
     column-gap: 5px;
@@ -216,18 +222,19 @@ footer p    {
 
 
 
-.zoomable-image {
+
+/*gia efe "animated" eikonas zoom in otan erxetai se epafi me ton cursor*/
+.zoomable-image {         
     width: 400px;
     height: 350px;
     overflow: hidden;
     position: relative;
-    display: flex;
-    justify-content: space-between; 
 }
 
 .zoomable-image img {
-    max-width:400px;
-    max-height:350px;
+    width:400px;
+    height:350px;
+    height: auto;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -235,7 +242,11 @@ footer p    {
     transform: scale(1.2); 
 }
 
-.color-changing-shadow {
+
+
+
+/*allagi sto xroma tis skiasis otan akoumpame ton cursor*/
+.color-changing-shadow {         
     position: relative;
     display: inline-block;
 }
@@ -251,7 +262,13 @@ footer p    {
     box-shadow: 5px 5px 20px rgba(4, 83, 220, 0.77);
 }
 
-.social-menu {
+
+
+
+
+/*"Gia tin selida AboutUs" efe "animated" oste otan akoumpame ton cursor sta eikonidia ton social media
+ na iparxei mia kinisi,allagi xromatos, kai emfanisi onomatos social*/
+.social-menu {        
     position: relative;
     display: flex;
 }
@@ -325,9 +342,14 @@ footer p    {
     color: #42f56f;
 }
 
+
+
+
+
+/*epiloges gia megethos eikonidion stin selida index kai Advertisements*/
 .flexcontainer{
     display: flex;
-    justify-content: space-between; 
+    justify-content:center;
 }
 
 .flexcontainer > a{
@@ -337,8 +359,8 @@ footer p    {
     font-size:30px;
 }
 .flexcontainer > a > img{
-    max-width: 80px;
-    height: auto;
+    width: 80px;
+    height: 80px;
 }
 
 .flexcontainer > details{
@@ -350,11 +372,14 @@ footer p    {
 }
 
 .flexcontainer > details > summary > img{
-    max-width: 80px;
-    height:auto;
+    width: 60px;
+    height: 60px;
 }
 
 
+
+
+/*diamorfosi tou form stin selida contact us etsi oste na einai omoiomorfo , me kinisi sta inputbox*/
 section{
     position: relative;
     left: 35%;
@@ -419,7 +444,7 @@ button:hover{
     background-color: rgba(7, 191, 212, 0.679)
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px){  /*gia tin askhsh 4*/
    p {
        font-size: 14px;
     }
@@ -496,6 +521,10 @@ button:hover{
 
     section{
         left: 0%;
+    }
+
+    h8{
+        font-size: 80%;
     }
 
 
